@@ -9,12 +9,32 @@ fun main() {
     var player2 = getString("Player 2, enter your name: ")
     println()
     println("$player1 choose your fighting style")
+
+    // set player stats
+    var player1hp = 100
+    var player1armour = 10
+    var player1strength = 10
+    var player1dexterity = 10
+    var player1intelligence = 10
+    var player1wisdom = 10
+    var player1charisma = 10
+
     while (true) {
         val gear1 = fightClass()
-        when (gear1) {
-            'Q'->break
-            'K'->
+        val stats = when (gear1) {
+            'Q' -> break
+            'K' -> {
+                player1hp +50
+                player1armour +8
+                player1strength +10
+                player1dexterity +5
+                player1intelligence -1
+                player1charisma +3
+            }
 
+            else -> {
+                break
+            }
         }
 
     }
@@ -71,5 +91,3 @@ fun fightClass(): Char {
     }
 }
 
-fun knight(){
-}
